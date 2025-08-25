@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text Game</title>
+</head>
+<body>
+    <h1>Învinge-l pe {{ enemy_name }} ({{ enemy_hp }} HP)</h1>
+    <h2>Tu ai {{ player_hp }} HP</h2>
+
+    <h1>{{ question }}</h1>
+    <form method="post">
+        {% for i, ans in answers %}
+             <input type="radio" name="choice" value="{{ i }}" required> {{ ans }}<br>
+        {% endfor %}
+        <button type="submit">Trimite</button>
+    </form>
+    <p>{{ msg }}</p>
+</body>
+</html>
